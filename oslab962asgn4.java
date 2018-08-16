@@ -31,6 +31,16 @@ class Sum_Runner extends Thread{
 
 public class oslab962asgn4{
 	public static void main(String[] args){
+		for (int i=0; i < args.length; i++)
+        {
+        	if(i%2 == 0) {
+            Sum_Runner object0 = new Sum_Runner(Integer.parseInt(args[i]),true);
+            object0.start();}
+        	else {
+        		Sum_Runner object0 = new Sum_Runner(Integer.parseInt(args[i]),false);
+                  object0.start();
+        	}
+        }
 		   
 	}
 }
